@@ -2,6 +2,8 @@
 
 module Day1 (getDepthIncreaseCount, getWindowDepthIncreaseCount) where
 
+(|>) x y = y x
+
 getFile :: IO String
 getFile = readFile "src/day1/day1.txt"
 
@@ -47,8 +49,6 @@ getWindows lst =
 getWindowDepthIncreaseCount :: IO ()
 getWindowDepthIncreaseCount = do
   file <- getFile
-  let depths = readInts file
-  let windows = getWindows depths
-  let increases = countIncreases windows
+  let increases = readInts file |> getWindows |> countIncreases
   _ <- print $ "total window increases: " ++ show increases
   return ()
