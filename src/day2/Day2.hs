@@ -13,9 +13,8 @@ getFile :: IO String
 getFile = readFile "src/day2/day2.txt"
 
 zipCommands :: [String] -> [(String, Int)]
-zipCommands [] = []
-zipCommands [x] = []
 zipCommands (x : y : xs) = (x, read y) : zipCommands xs
+zipCommands _ = []
 
 processCommandPart1 :: (Horizontal, Depth) -> (String, Int) -> (Horizontal, Depth)
 processCommandPart1 (h, d) ("forward", x) = (h + x, d)
