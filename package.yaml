@@ -26,6 +26,7 @@ library:
   source-dirs: 
     - src
     - src/day1
+    - src/day2
 
 executables:
   advent-of-code-exe:

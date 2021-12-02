@@ -1,6 +1,6 @@
 module Main where
 
-import Day1 (getDepthIncreaseCount, getWindowDepthIncreaseCount)
+import Day2 (reportAnswerPart2)
 
 main :: IO ()
-main = getWindowDepthIncreaseCount
+main = reportAnswerPart2

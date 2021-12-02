@@ -2,6 +2,7 @@
 
 module Day1 (getDepthIncreaseCount, getWindowDepthIncreaseCount) where
 
+(|>) :: a -> (a -> b) -> b
 (|>) x y = y x
 
 getFile :: IO String
