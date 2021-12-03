@@ -1,6 +1,6 @@
 module Main where
 
-import Day2 (reportAnswerPart2)
+import Day3.Day3 (reportDay3Part1, reportDay3Part2)
 
 main :: IO ()
-main = reportAnswerPart2
+main = reportDay3Part2
