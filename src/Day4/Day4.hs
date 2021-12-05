@@ -22,14 +22,14 @@ getChoices fileLines = map read $ wordsWhen (== ',') $ head fileLines
 lineToNumbers :: String -> [Int]
 lineToNumbers str = map read $ words str
 
-stuff :: [String] -> [[[Int]]]
-stuff [] = [] :: [[[Int]]]
-stuff fLines = map lineToNumbers (take 5 fLines) : stuff (drop 5 fLines)
+buildBoards :: [String] -> [[[Int]]]
+buildBoards [] = [] :: [[[Int]]]
+buildBoards fLines = map lineToNumbers (take 5 fLines) : buildBoards (drop 5 fLines)
 
 parseBoards :: [String] -> [[[Int]]]
 parseBoards fLines =
   let strippedLines = filter (/= "") $ drop 2 fLines
-   in stuff strippedLines
+   in buildBoards strippedLines
 
 listIsFullyMarked :: Bool -> [Int] -> Bool
 listIsFullyMarked winner list = winner || (-5) == sum list

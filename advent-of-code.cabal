@@ -27,6 +27,8 @@ library
   exposed-modules:
       Day3.Day3
       Day4.Day4
+      Day4.Day4Refactor
+      Day5.Day5
       Lib
       Day1
       Day2
@@ -38,6 +40,7 @@ library
       src/day2
   build-depends:
       base >=4.7 && <5
+    , containers
   default-language: Haskell2010
 
 executable advent-of-code-exe
@@ -50,6 +53,7 @@ executable advent-of-code-exe
   build-depends:
       advent-of-code
     , base >=4.7 && <5
+    , containers
   default-language: Haskell2010
 
 test-suite advent-of-code-test
@@ -63,4 +67,5 @@ test-suite advent-of-code-test
   build-depends:
       advent-of-code
     , base >=4.7 && <5
+    , containers
   default-language: Haskell2010
